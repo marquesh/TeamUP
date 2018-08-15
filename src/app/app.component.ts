@@ -7,6 +7,8 @@ import { ListPage } from "../pages/list/list";
 
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
+import { StartPage } from "./../pages/start/start";
+import { Page } from "../../node_modules/ionic-angular/umd/navigation/nav-util";
 
 @Component({
   templateUrl: "app.html"
@@ -14,9 +16,7 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 export class MyApp {
   @ViewChild(Nav)
   nav: Nav;
-
-  // make HelloIonicPage the root (or first) page
-  rootPage = HomePage;
+  rootPage: Page;
   pages: Array<{ title: string; component: any }>;
 
   constructor(
@@ -27,7 +27,8 @@ export class MyApp {
   ) {
     this.initializeApp();
 
-    // set our app's pages
+    this.rootPage = HomePage; // TODO : if firstTime : show blabla, else direct to start;
+
     this.pages = [
       { title: "Teams", component: HomePage },
       { title: "Players", component: ListPage }
@@ -47,6 +48,6 @@ export class MyApp {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
 }

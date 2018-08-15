@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -6,8 +6,30 @@
     <ion-title>TeamUP</ion-title>
   </ion-navbar>
 </ion-header>
+ -->
 
+<ion-slides pager>
 
+  <ion-slide style="background-color: whitesmoke">
+    <h2>Welcome to TeamUP</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: whitesmoke">
+    <h2>This is the second bla bla text</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: whitesmoke">
+    <h2>and here we finish our presentation. Let's get started.</h2>
+    <ion-buttons start>
+      <button ion-button (click)="goStart()">
+        <p>Lets go!</p>
+      </button>
+    </ion-buttons>
+  </ion-slide>
+
+</ion-slides>
+
+<!-- 
 <ion-content padding>
   This is a simple app to let you sort teams.
   <p>
@@ -17,4 +39,4 @@
   <p>
     Let's go !
   </p>
-</ion-content>
+</ion-content> -->
