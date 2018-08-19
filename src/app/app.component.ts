@@ -7,7 +7,6 @@ import { ListPage } from "../pages/list/list";
 
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
-import { StartPage } from "./../pages/start/start";
 import { Page } from "../../node_modules/ionic-angular/umd/navigation/nav-util";
 
 @Component({
@@ -45,9 +44,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
     this.nav.push(page.component);
   }
 }

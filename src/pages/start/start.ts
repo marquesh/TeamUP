@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
+import { MatchSettings } from "./../matchSettings/matchSettings";
 
 @Component({
   selector: "page-start",
@@ -7,4 +8,8 @@ import { NavController } from "ionic-angular";
 })
 export class StartPage {
   constructor(public navCtrl: NavController) {}
+
+  quickStart() {
+    this.navCtrl.push(MatchSettings);
+  }
 }
